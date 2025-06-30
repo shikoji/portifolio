@@ -1,0 +1,115 @@
+:root {
+    --marron-claro: rgb(205,133,63);
+    --marron-escuro: rgb(139,69,19);
+    --vermelho-claro: rgb(255,99,71);  
+    --preto: rgb(0,0,0);
+    --branco: rgb(255,255,255);
+    --cinzapreto: rgb(168, 168, 168);
+    --cinza: rgb(128, 128, 128);
+    --pale-dogwood: rgba(237, 196, 179, 1);
+    --desert-sand: rgba(230, 184, 162, 1);
+    --buff: rgba(222, 171, 144, 1);
+    --buff-2: rgba(214, 159, 126, 1);
+    --buff-3: rgba(205, 151, 119, 1);
+    --persian-orange: rgba(195, 142, 112, 1);
+    --chamoisee: rgba(176, 125, 98, 1);
+    --brown-sugar: rgba(157, 107, 83, 1);
+    --raw-umber: rgba(138, 90, 68, 1);
+    --bole: rgba(119, 73, 54, 1);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    background-color: var(--buff-2);
+    font-family: monospace;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    flex: 1; /* Ocupa o espaço disponível para empurrar o footer para baixo */
+}
+
+/* Cabeçalhos e parágrafos */
+h2 {
+    color: var(--bole);
+    margin-bottom: 10px;
+}
+
+p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+/* Footer corrigido */
+footer {
+    background-color: var(--persian-orange);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: small;
+    color: var(--bole);
+    padding: 10px;
+}
+
+/* Header continua fixo */
+header {
+    display: flex;
+    background-color: var(--persian-orange);
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.flaticon img {
+    flex: 1;
+    width: 40px;
+    margin: 5px;
+}
+
+.butoes {
+    flex: 2;
+    display: flex;
+    justify-content: end;
+    align-items:center;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: var(--bole);
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Ajuste da margem superior por causa do header fixo */
+#home,
+#informacoes,
+#curiosidades,
+#imagens,
+#videos {
+    scroll-margin-top: 55px;
+    margin-top: 55px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+
