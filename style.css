@@ -23,7 +23,8 @@ html, body {
   flex-direction: column;
   scroll-behavior: smooth;
   background-color: var(--branco);
-  font-family: monospace;
+  font-family: ola;
+  font-weight: 0;
   color: var(--preto);
   overflow-x: hidden;
 }
@@ -51,7 +52,7 @@ p {
 /* Header */
 header {
   display: flex;
-  background-color: var(--azul-petroleo);
+  background-color: var(--cinza-medio);
   position: fixed;
   align-items: center;
   justify-content: space-between;
@@ -69,22 +70,23 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
-  font-family: ola;
 }
 
 nav.butao button {
-  background: none;
+  font-family: ola;
+  background: transparent;
   border: none;
-  color: var(--branco);
-  font-size: 18px;
+  color: red;
+  font-size: 24px;
+  letter-spacing: 3px;
   padding: 10px 15px;
   cursor: pointer;
-  font-weight: bold;
   transition: 0.2s;
 }
 
 nav.butao button:hover {
-  color: var(--vermelho-profundo);
+  font-weight:bold;
+  color: red;
   transform: scale(1.3);
 }
 
@@ -92,10 +94,12 @@ nav.butao button:hover {
 #home, #projetos {
   background-color: var(--cinza-claro);
   padding: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 #sobre, #contato {
-  background-color: var(--branco);
+  background-color: var(--cinza-claro);
   padding: 20px;
 }
 
@@ -104,7 +108,9 @@ nav.butao button:hover {
 #projetos,
 #contato {
   scroll-margin-top: 70px;
-  margin-top: 70px;
+  margin-top: 61px;
+  width: 100%;
+  height: 100vh;
 }
 
 /* SPA Pages */
@@ -127,8 +133,242 @@ footer {
   padding: 10px;
 }
 
-/* Interações visuais */
-img:hover {
-  border: 2px solid var(--vermelho-profundo);
-  transition: border 0.3s ease;
+/* animacao de franks cafka */
+
+@keyframes balanco {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+
+  }
 }
+
+.um span {
+  display: inline-block;
+  animation: balanco 1s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hanbuguer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tamanhos de fonte base para diferentes larguras de tela */
+:root {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  :root { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  :root { font-size: 15px; }
+}
+
+/* Reset de box model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Estilo base do corpo da página */
+
+body{
+    background-color: green;
+}
+
+/* Container do botão + menu */
+.navigation-wrapper {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 1000;
+}
+
+/* Botão do menu hamburguer */
+.navigation-wrapper label {
+  position: relative;
+  border-radius: 0.3rem;
+  z-index: 2;
+  transition: transform 0.35s ease-in;
+}
+
+/* Estilo visual do botão */
+.navigation-wrapper .button {
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ícone dentro do botão */
+.navigation-wrapper .button > i {
+  margin: auto;
+  transform: rotateZ(0turn);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Menu lateral escondido inicialmente */
+/* caixa branca */
+.navigation-wrapper .navigation { 
+  position: absolute;
+  top: 0;
+  right: 3.5rem;
+  width: 30rem;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease-in;
+  z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navigation-wrapper .navigation {
+    width: 26rem;
+  }
+}
+@media (max-width: 480px) {
+  .navigation-wrapper .navigation {
+    width: 23rem;
+  }
+}
+
+
+
+
+
+
+/* Lista de navegação */
+.navigation-wrapper .navigation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Remove as bolinhas da lista */
+  padding: 0;        /* Remove o recuo interno padrão */
+  margin: 0; 
+}
+
+.navigation-wrapper .navigation li {
+  flex: 1;
+  text-align:center;
+}
+
+/* Links do menu */
+.navigation-wrapper .navigation a {
+  display: block;
+  color: red;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 60px;
+  font-size: 24px;
+  position: relative;
+  transition: 0.2s;
+}
+
+/* Efeito hover nos links */
+.navigation-wrapper .navigation a:hover { /*mexer nos butao aqqqqq*/
+  background: transparent;
+  color: red;
+  transform: scale(1.3);
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.navigation-wrapper .navigation a:hover:before {
+  background: rgba(29, 144, 245, 0.8);
+}
+
+/* Esconde o checkbox */
+#toggleCheck {
+  display: none;
+}
+
+/* Quando o menu está ativado (checkbox marcado) */
+#toggleCheck:checked ~ .navigation {
+  transform: scaleX(1);
+  transition: transform 0.35s cubic-bezier(0.5, -0.3, 0.5, 1.5);
+}
+#toggleCheck:checked ~ label .button {
+  background-color: transparent;
+  color: red;
+}
+#toggleCheck:checked ~ label .button > i {
+  transform: rotateZ(0.5turn);
+}
+
+/* Ícone de fechar (X) ao abrir o menu */
+#toggleCheck:checked ~ label .button > i:before {
+  content: "\f00d"; /* Ícone X do FontAwesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Esconder menu hamburguer em telas grandes */
+.navigation-wrapper {
+  display: none;
+}
+
+/* MOBILE: esconder nav tradicional, mostrar hambúrguer */
+@media (max-width: 768px) {
+  nav.butao {
+    display: none;
+  }
+
+  .navigation-wrapper {
+    display: block;
+  }
+
+}
+

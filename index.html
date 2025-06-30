@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chicken</title>
+  <title>Shikoji</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="website icon" href="fotos/galinha.png">
+  <link rel="website icon" href="src/img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -20,15 +21,45 @@
         <button data-page="projetos">Projetos</button>
         <button data-page="contato">Contato</button>
       </nav>
+
+    </div>
+
+  <!-- Menu hamburguer com toggle -->
+    <div class="navigation-wrapper">
+      
+      <!-- Checkbox escondido para controlar o toggle do menu -->
+      <input id="toggleCheck" type="checkbox" />
+
+      <!-- Botão que abre/fecha o menu -->
+      <label for="toggleCheck">
+        <div class="button" id="menuBtn">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+      </label>
+
+      <!-- Menu de navegação que expande -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+
     </div>
   </header>
 
   <main>
     <section id="home" class="page">
       <h2>Home</h2>
+      <p style="font-size: 24px;text-align: center;">
+        Certa manhã, ao despertar de sonhos intranquilos, Gregor Samsa encontrou-se em sua cama transformado em um inseto monstruoso. Estava deitado de costas, duras como couraça, e ao levantar um pouco a cabeça, conseguia ver sua barriga marrom, ligeiramente abaulada e dividida em seções rígidas por saliências arqueadas. A roupa de cama mal conseguia cobri-la e parecia prestes a escorregar a qualquer momento.<br><span class="um" style="color: red;">The Metamorphosis - Franz Kafka</span>
+      </p>
       <p>Bem-vindo ao nosso site sobre Galinhas!</p>
       <p>Aqui você vai mergulhar no fascinante mundo dessas aves incríveis, cheias de charme, personalidade e importância para o nosso dia a dia!</p>
       <p>Explore curiosidades, informações sobre as diferentes raças, imagens encantadoras e vídeos divertidos que mostram como as galinhas são muito mais do que simples animais do campo — elas conquistam o coração de crianças e adultos com seu jeito único.</p>
+      
     </section>
 
     <section id="sobre" class="page">
