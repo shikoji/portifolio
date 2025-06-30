@@ -199,12 +199,6 @@ footer {
   box-sizing: border-box;
 }
 
-/* Estilo base do corpo da página */
-
-body{
-    background-color: green;
-}
-
 /* Container do botão + menu */
 .navigation-wrapper {
   position: fixed;
@@ -229,7 +223,13 @@ body{
   display: flex;
   width: 3rem;
   height: 3rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition: 0.2s;
+}
+
+.navigation-wrapper .button:hover{
+  color: blue;
+  transform: scale(1.3);
+  font-weight: bold;
 }
 
 /* Ícone dentro do botão */
@@ -245,9 +245,10 @@ body{
   position: absolute;
   top: 0;
   right: 3.5rem;
-  width: 30rem;
+  width: 3rem;
+  height: 53px;
   background-color: whitesmoke;
-  border-radius: 15px;
+  border-radius: 150px;
   overflow: hidden;
   transform: scaleX(0);
   transform-origin: right;
@@ -266,6 +267,12 @@ body{
     width: 23rem;
   }
 }
+
+
+
+
+
+
 
 
 
@@ -291,10 +298,9 @@ body{
 .navigation-wrapper .navigation a {
   display: block;
   color: red;
-  font-weight: normal;
   text-decoration: none;
   line-height: 60px;
-  font-size: 24px;
+  font-size: 28px;
   position: relative;
   transition: 0.2s;
 }
@@ -314,9 +320,16 @@ body{
 
 
 
-.navigation-wrapper .navigation a:hover:before {
-  background: rgba(29, 144, 245, 0.8);
-}
+
+
+
+
+
+
+
+
+
+
 
 /* Esconde o checkbox */
 #toggleCheck {
@@ -328,12 +341,20 @@ body{
   transform: scaleX(1);
   transition: transform 0.35s cubic-bezier(0.5, -0.3, 0.5, 1.5);
 }
+
 #toggleCheck:checked ~ label .button {
   background-color: transparent;
   color: red;
+  transition: 0.2s ease-out;
 }
+
+#toggleCheck:checked ~ label .button:hover{
+  color: blue;
+  transform: scale(1.5);
+}
+
 #toggleCheck:checked ~ label .button > i {
-  transform: rotateZ(0.5turn);
+  transform: rotateZ(0.5turn)
 }
 
 /* Ícone de fechar (X) ao abrir o menu */
