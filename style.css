@@ -241,11 +241,28 @@ footer {
 
 /* Menu lateral escondido inicialmente */
 /* caixa branca */
-.navigation-wrapper .navigation { 
-  position: absolute;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lista de navegação */
+/* Menu hamburguer: layout horizontal */
+
+.navigation-wrapper .navigation {
+  position: absolute;  /*se deixar relativo ele fica embaixo*/
   top: 0;
   right: 3.5rem;
-  width: 3rem;
   height: 53px;
   background-color: whitesmoke;
   border-radius: 150px;
@@ -254,6 +271,13 @@ footer {
   transform-origin: right;
   transition: transform 0.35s ease-in;
   z-index: 1;
+
+  /* AQUI adicionamos o layout horizontal */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* espaçamento entre botões */
+  padding: 0 10px;
 }
 
 /* Responsividade */
@@ -268,50 +292,35 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Lista de navegação */
-.navigation-wrapper .navigation ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none; /* Remove as bolinhas da lista */
-  padding: 0;        /* Remove o recuo interno padrão */
-  margin: 0; 
-}
-
-.navigation-wrapper .navigation li {
-  flex: 1;
-  text-align:center;
-}
-
-/* Links do menu */
-.navigation-wrapper .navigation a {
-  display: block;
-  color: red;
-  text-decoration: none;
-  line-height: 60px;
+/* Estilo dos botões */
+.navigation-wrapper .navigation button {
+  background: transparent;
+  border: none;
   font-size: 28px;
-  position: relative;
+  font-family: ola;
+  color: red;
+  
+
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 60px;     /* igual à altura do menu */
+  display: block;
+  align-items: center;
+  justify-content: center;
   transition: 0.2s;
 }
 
-/* Efeito hover nos links */
-.navigation-wrapper .navigation a:hover { /*mexer nos butao aqqqqq*/
-  background: transparent;
-  color: red;
+
+.navigation-wrapper .navigation button:hover {
+  background-color: transparent;
   transform: scale(1.3);
   font-weight: bold;
+  color: red;
 }
+
+
 
 
 

@@ -37,12 +37,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// animação de franks kafka
-const elementos = document.querySelectorAll('.um');
-
-elementos.forEach(el => {
-  const letras = el.textContent.split('');
-  el.innerHTML = letras.map((letra, i) =>
-    `<span style="display:inline-block; animation: balanco 1s ease-in-out infinite; animation-delay: ${i * 0.1}s">${letra}</span>`
-  ).join('');
-});
