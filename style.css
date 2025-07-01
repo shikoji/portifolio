@@ -315,16 +315,37 @@ footer {
   }
 
   .navigation-wrapper .navigation {
-    width: 23rem;
+    width: 10rem;
   }
 
   .navigation-wrapper .navigation button {
-    font-size: 16px;
+
+    font-size: 20px;
     padding: 0 10px;
   }
 
   .navigation-wrapper {
     top: 10px;
   }
+
+  .navigation-wrapper .navigation {
+  position: fixed;
+  display: flex;
+
+  flex-direction: column;
+  height: 290px;
+  top: 4.5rem;
+  right: 0.5rem;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  overflow: hidden;
+  transform-origin: right;
+  transition: transform 0.35s ease-in;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+}
 
 }
