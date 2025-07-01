@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- =========================== -->
+  <!-- METADADOS E IMPORTAÇÕES -->
+  <!-- =========================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shikoji</title>
@@ -8,12 +11,18 @@
   <link rel="website icon" href="src/img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
+
 <body>
+  <!-- =========================== -->
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <!-- =========================== -->
   <header>
+    <!-- Logo -->
     <div class="flaticon">
-      <img src="src/img/logo.png" alt="">
+      <img src="src/img/logo.png" alt="Logo do site">
     </div>
 
+    <!-- Menu tradicional (desktop) -->
     <div class="butoes">
       <nav class="butao">
         <button data-page="home">Home</button>
@@ -21,81 +30,75 @@
         <button data-page="projetos">Projetos</button>
         <button data-page="contato">Contato</button>
       </nav>
-
     </div>
 
-  <!-- Menu hamburguer com toggle -->
+    <!-- Menu hamburguer (mobile) -->
     <div class="navigation-wrapper">
-      
-      <!-- Checkbox escondido para controlar o toggle do menu -->
       <input id="toggleCheck" type="checkbox" />
-
-      <!-- Botão que abre/fecha o menu -->
       <label for="toggleCheck">
         <div class="button" id="menuBtn">
           <i class="fa fa-bars fa-2x"></i>
         </div>
       </label>
-
-      <!-- Menu de navegação que expande -->
       <nav class="navigation">
         <button data-page="home">Home</button>
         <button data-page="sobre">Sobre</button>
         <button data-page="projetos">Projetos</button>
         <button data-page="contato">Contato</button>
       </nav>
-
     </div>
   </header>
 
+  <!-- =========================== -->
+  <!-- CONTEÚDO PRINCIPAL        -->
+  <!-- =========================== -->
   <main>
     <section id="home" class="page">
       <h2>Home</h2>
-      <p style="font-size: 24px;text-align: center;">
-        Certa manhã, ao despertar de sonhos intranquilos, Gregor Samsa encontrou-se em sua cama transformado em um inseto monstruoso. Estava deitado de costas, duras como couraça, e ao levantar um pouco a cabeça, conseguia ver sua barriga marrom, ligeiramente abaulada e dividida em seções rígidas por saliências arqueadas. A roupa de cama mal conseguia cobri-la e parecia prestes a escorregar a qualquer momento.<br><span class="um" style="color: red;">The Metamorphosis - Franz Kafka</span>
+      <p style="font-size: 24px; text-align: center;">
+        Certa manhã, ao despertar de sonhos intranquilos, Gregor Samsa encontrou-se em sua cama transformado em um inseto monstruoso...<br>
+        <span class="um" style="color: red;">The Metamorphosis - Franz Kafka</span>
       </p>
       <p>Bem-vindo ao nosso site sobre Galinhas!</p>
-      <p>Aqui você vai mergulhar no fascinante mundo dessas aves incríveis, cheias de charme, personalidade e importância para o nosso dia a dia!</p>
-      <p>Explore curiosidades, informações sobre as diferentes raças, imagens encantadoras e vídeos divertidos que mostram como as galinhas são muito mais do que simples animais do campo — elas conquistam o coração de crianças e adultos com seu jeito único.</p>
-      
+      <p>Aqui você vai mergulhar no fascinante mundo dessas aves incríveis...</p>
     </section>
 
     <section id="sobre" class="page">
       <h2>Informações</h2>
       <strong>[1] As galinhas “falam” entre si!</strong>
-      <p>Galinhas têm um sistema de comunicação surpreendente com mais de 30 sons diferentes para alertar sobre comida, perigo, ou até chamar os filhotes.</p>
-      <strong>[2] Existem galinhas com penas nos pés e até no topo da cabeça!</strong>
-      <p>Algumas galinhas têm visuais super inusitados — como a Silkie, que parece um pompom ambulante, e a Polish, com um “topete” espetacular!</p>
+      <p>Galinhas têm um sistema de comunicação surpreendente...</p>
+      <strong>[2] Existem galinhas com penas nos pés...</strong>
+      <p>Algumas galinhas têm visuais super inusitados...</p>
       <strong>[3] As galinhas têm memória e reconhecem rostos!</strong>
-      <p>Elas conseguem lembrar e diferenciar até 100 rostos humanos ou de outras galinhas. Sim, aquela galinha sabe quem é você!</p>
+      <p>Elas conseguem lembrar e diferenciar até 100 rostos...</p>
       <strong>[4] Elas são descendentes diretas dos dinossauros!</strong>
-      <p>As galinhas compartilham ancestrais com os temidos Tiranossauros Rex.</p>
+      <p>As galinhas compartilham ancestrais com os T-Rex.</p>
     </section>
 
     <section id="projetos" class="page">
       <h2>Curiosidades</h2>
-      <p>Galinhas usam sons específicos para se comunicar — uma verdadeira língua das penas!</p>
-      <p>Com um repertório cheio de sons únicos, elas avisam quando encontram comida ou quando há perigo por perto.</p>
-      <p>Galinhas são curiosas e inteligentes. Se tiverem brinquedos (como bolas, escadinhas ou até espelhos), elas exploram e se divertem de verdade!</p>
-      <p>Apesar de serem aves, a maioria das galinhas domésticas só consegue dar voos curtos e baixos — geralmente só o suficiente pra subir em cercas ou poleiros.</p>
+      <p>Galinhas usam sons específicos para se comunicar...</p>
+      <p>Com um repertório cheio de sons únicos...</p>
+      <p>Galinhas são curiosas e inteligentes...</p>
+      <p>Apesar de serem aves, voam apenas curtas distâncias...</p>
     </section>
 
     <section id="contato" class="page">
       <h2>Imagens</h2>
       <p>Galeria de imagens será adicionada aqui.</p>
     </section>
-
   </main>
 
+  <!-- =========================== -->
+  <!-- RODAPÉ                    -->
+  <!-- =========================== -->
   <footer>
     🐔@Galinha.com.br
   </footer>
 
+  <!-- =========================== -->
+  <!-- SCRIPTS                     -->
+  <!-- =========================== -->
   <script src="style.js"></script>
 </body>
-</html>
-
-<!-- nav.butao button:hover {
-  color: var(--vermelho-destaque);
-  transform: scale(1.05);
-} -->
+</html>")

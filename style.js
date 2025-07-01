@@ -1,7 +1,13 @@
+// SPA Navigation Script
+// =======================
+// Controla a navegação entre seções com botões e links do menu hamburguer
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os botões de navegação (desktop e mobile)
   const buttons = document.querySelectorAll("nav button");
   const pages = document.querySelectorAll(".page");
 
+  // Função que exibe a página solicitada e esconde as demais
   function showPage(pageId) {
     pages.forEach((section) => {
       section.classList.remove("active");
@@ -11,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Evento de clique para os botões (desktop + menu hamburguer)
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const target = btn.getAttribute("data-page");
@@ -19,10 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Verifica se existe hash na URL ao carregar a página
   const hash = window.location.hash.replace("#", "") || "home";
   showPage(hash);
 
-  // NOVO: SPA funcionando com os links do hamburguer também
+  // Caso ainda existam <a> tags no menu hamburguer (opcional)
   const hamburgerLinks = document.querySelectorAll(".navigation a");
   const hamburgerCheckbox = document.getElementById("toggleCheck");
 
@@ -36,4 +44,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
