@@ -68,6 +68,8 @@ p {
 header {
   display: flex;
   background-color: var(--cinza-medio);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   position: fixed;
   align-items: center;
   justify-content: space-between;
@@ -78,12 +80,14 @@ header {
 }
 
 .flaticon img {
+  flex: 1;
   width: 60px;
 }
 
 .butoes {
+  flex: 2;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -157,7 +161,7 @@ footer {
 /* Container do botão + menu */
 .navigation-wrapper {
   position: fixed;
-  top: 5px;
+  top: 3px;
   right: 5px;
   z-index: 1000;
 }
@@ -194,8 +198,8 @@ footer {
 
 /* Menu expandido */
 .navigation-wrapper .navigation {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 4.5px;
   right: 3.5rem;
   height: 53px;
   background-color: whitesmoke;
@@ -265,20 +269,25 @@ footer {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+#tst_cll{
+  background-color: #5dade2
+}
+#tst_cll.ativo{
+  background-color: aquamarine;
+}
 
 /* ===================================================
    RESPONSIVIDADE
 =================================================== */
 
+/* Desktop: estilo padrão já aplicado */
+
 /* estilos para desktop */
-@media (min-width: 1025px) or (max-width: 1025px) {
+@media (min-width: 1025px) or (max-width: 1440px) {
   .navigation-wrapper {
     display: none;
   }
 }
-
-
-/* Desktop: estilo padrão já aplicado */
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -300,7 +309,7 @@ footer {
 }
 
 /* Celular */
-@media (max-width: 480px) {
+@media (max-width: 584px) {
   :root {
     font-size: 15px;
   }
@@ -308,4 +317,14 @@ footer {
   .navigation-wrapper .navigation {
     width: 23rem;
   }
+
+  .navigation-wrapper .navigation button {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .navigation-wrapper {
+    top: 10px;
+  }
+
 }

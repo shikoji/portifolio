@@ -44,3 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/*
+const botao = document.getElementById('btn');
+const tt_cll = document.getElementById('tst_cll')
+const Corpo =document.getElementById('corpo')
+
+botao.addEventListener('click', () => {
+  console.log("clicado")
+  tt_cll.classList.toggle('ativo')
+}) 
+
+Corpo.addEventListener('click', () => {
+  console.log("clicado")
+  tt_cll.classList.toggle('ativo')
+}) 
+*/
