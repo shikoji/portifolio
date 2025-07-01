@@ -12,12 +12,10 @@
   --vermelho-profundo: #b22222;
   --azul-petroleo: #264653;
   --azul-claro: #5dade2;
-
-  font-size: 20px;
 }
 
 @font-face {
-  font-family: ola;
+  font-family: sangue;
   src: url("src/font/Kingdom - Pixel Font v1_3.ttf") format("truetype");
 }
 
@@ -36,7 +34,7 @@ html, body {
   flex-direction: column;
   scroll-behavior: smooth;
   background-color: var(--branco);
-  font-family: ola;
+  font-family: sangue;
   font-weight: 0;
   color: var(--preto);
   overflow-x: hidden;
@@ -90,7 +88,7 @@ header {
 }
 
 nav.butao button {
-  font-family: ola;
+  font-family: sangue;
   background: transparent;
   border: none;
   color: red;
@@ -120,6 +118,8 @@ nav.butao button:hover {
 #sobre, #contato {
   background-color: var(--cinza-claro);
   padding: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 #home, #sobre, #projetos, #contato {
@@ -148,23 +148,6 @@ footer {
   font-size: small;
   color: var(--branco);
   padding: 10px;
-}
-
-/* ===================================================
-   ANIMAÇÃO: Kafka Citação
-=================================================== */
-@keyframes balanco {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-.um span {
-  display: inline-block;
-  animation: balanco 1s ease-in-out infinite;
 }
 
 /* ===================================================
@@ -234,7 +217,7 @@ footer {
   background: transparent;
   border: none;
   font-size: 24px;
-  font-family: ola;
+  font-family: sangue;
   color: red;
   padding: 0 20px;
   margin: 0;
@@ -286,6 +269,14 @@ footer {
 /* ===================================================
    RESPONSIVIDADE
 =================================================== */
+
+/* estilos para desktop */
+@media (min-width: 1025px) or (max-width: 1025px) {
+  .navigation-wrapper {
+    display: none;
+  }
+}
+
 
 /* Desktop: estilo padrão já aplicado */
 
