@@ -45,18 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*
-const botao = document.getElementById('btn');
-const tt_cll = document.getElementById('tst_cll')
-const Corpo =document.getElementById('corpo')
+// se clicar fora do hamburguer ele fecha //
+function fecharMenuSeClicarFora(event) {
+  const toggle = document.getElementById('toggleCheck');
+  const nav = document.querySelector('.navigation-wrapper');
 
-botao.addEventListener('click', () => {
-  console.log("clicado")
-  tt_cll.classList.toggle('ativo')
-}) 
-
-Corpo.addEventListener('click', () => {
-  console.log("clicado")
-  tt_cll.classList.toggle('ativo')
-}) 
-*/
+  if (
+    toggle.checked &&
+    !nav.contains(event.target) &&
+    event.target.id !== 'toggleCheck'
+  ) {
+    toggle.checked = false;
+  }
+}
+// Eventos separados pra melhor resposta em diferentes dispositivos
+document.addEventListener('mousedown', fecharMenuSeClicarFora);
+document.addEventListener('touchstart', fecharMenuSeClicarFora);
