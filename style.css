@@ -50,16 +50,6 @@ main {
 /* ===================================================
    TIPOGRAFIA
 =================================================== */
-h2 {
-  color: var(--azul-petroleo);
-  margin-bottom: 10px;
-}
-
-p {
-  color: var(--preto);
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
 
 /* ===================================================
    HEADER E NAVEGAÇÃO TRADICIONAL
@@ -109,6 +99,21 @@ nav.butao button:hover {
 
 }
 
+.card {
+  background-color: var(--branco);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+
 /* ===================================================
    SEÇÕES SPA
 =================================================== */
@@ -128,7 +133,7 @@ nav.butao button:hover {
 
 #home, #sobre, #projetos, #contato {
   scroll-margin-top: 70px;
-  margin-top: 61px;
+  margin-top: 62px;
   width: 100%;
   min-height: calc(100vh - 61px - 50px);
 }
@@ -141,83 +146,231 @@ nav.butao button:hover {
   display: block;
 }
 
+/* ===============================
+   ESTILO DAS SEÇÕES (TEXTO, TÍTULO, PARÁGRAFOS)
+================================ */
+
+/* HOME */
+#home h3 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: var(--branco);
+}
+
+#home h2 {
+  font-size: 32px;
+  color: var(--azul-claro);
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 20px;
+  color: var(--branco-transparente);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* SOBRE, PROJETOS, CONTATO */
+/* #sobre h2, #projetos h2, #contato h2 {
+  font-size: 36px;
+  color: var(--vermelho-profundo);
+  margin-bottom: 20px;
+}
+
+#sobre p, #projetos p, #contato p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--preto);
+  max-width: 800px;
+  margin-bottom: 15px;
+} */
+
+/* Listas em SOBRE */
+#sobre ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#sobre li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* LINKS DE CONTATO */
+#contato a {
+  color: var(--azul-petroleo);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#contato a:hover {
+  color: var(--vermelho-profundo);
+  text-decoration: underline;
+}
+
+/* Wrapper flexível que alinha os cards lado a lado */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card maior (imagem deitada) */
+.card {
+  width: 360px;
+  height: 220px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Quando passa o mouse */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Camada escura ao passar o mouse */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* Imagem deitada cobrindo o card */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+/* Conteúdo sobre a imagem */
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+
+.card .info h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card .info p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 6px;
+  line-height: 1.4;
+  color: white;
+}
+
+
+
+.card .info button,
+.card .info a {
+  margin-top: 10px;
+  padding: 0.5rem 0.8rem;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.card .info button:hover,
+.card .info a:hover {
+  background: dodgerblue;
+  color: white;
+}
+
 
 
 /* ===================================================
    FOOTER
 =================================================== */
-footer{
+footer {
   background-color: var(--cinza-escuro);
   width: 100%;
-  height: 50px;
   text-align: center;
   font-family: Arial, sans-serif;
-  font-size: small;
   color: var(--branco);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  padding: 10px 0 10px;
 }
 
+.footer-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
-/* Contêiner dos botões */
+.footer-conteudo p {
+  margin: 0;
+  font-family: Sangue;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--cinza-claro);
+}
+
+/* Container dos ícones */
 footer .galinha {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
-/* Estilo dos botões */
-.galinha .menu {
-  position: relative;
-  background: transparent;
-  border: 2.5px solid rgb(2, 27, 255);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  overflow: hidden;
-  font-size: 24px;
-  color: black;
-  transition: color 0.3s ease, transform 0.2s ease;
+/* Estilo dos links como ícones */
+footer .galinha a.menu {
+  color: red;
+  font-size: 28px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
 }
 
-/* Ícones dentro dos botões */
-.galinha .menu i {
-  position: relative;
-  font-size: 26px;
-  z-index: 2;
-}
-
-/* Efeito de hover */
-.menu:hover {
-  color: white;
-}
-
-/* Animação de fundo com ::before */
-.menu::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: rgb(2, 27, 255);
-  border-radius: 50%;
-  transform: scale(0);
-  transition: transform 0.5s ease-out;
-  z-index: 1;
-}
-
-/* Quando passa o mouse, cresce o fundo */
-.menu:hover::before {
-  transform: scale(1);
-}
-
-/* Efeito de clique */
-.menu:active i {
-  transform: scale(1.1);
+footer .galinha a.menu:hover {
+  color: blue;
+  transform: scale(1.3);
+  text-shadow: 0 0 5px rgba(0, 0, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5);
 }
 
 /* ===================================================
@@ -253,7 +406,6 @@ footer .galinha {
 .navigation-wrapper .button:hover {
   color: blue;
   transform: scale(1.3);
-  font-weight: bold;
   text-shadow: 0 0 5px rgba(0, 0, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5);
 
 }
@@ -430,3 +582,6 @@ footer .galinha {
   transform: translateX(0%);
   transition: all 0.4s ease-in-out;
 }
+
+
+

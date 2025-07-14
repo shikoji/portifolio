@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="website icon" href="src/img/logo.png">
   <link rel="stylesheet" href="src/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="src/fontawesome/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -52,60 +51,119 @@
   </header>
 
   <!-- =========================== -->
-  <!-- CONTEÚDO PRINCIPAL        -->
+  <!-- CONTEÚDO PRINCIPAL -->
   <!-- =========================== -->
   <main>
-    <section id="home" class="page">
-      <h2>Home</h2>
-      <p style="font-size: 24px; text-align: center;">
-        Certa manhã, ao despertar de sonhos intranquilos, Gregor Samsa encontrou-se em sua cama transformado em um inseto monstruoso...<br>
-        <p class="um" style="color: red; text-align: center;">The Metamorphosis - Franz Kafka</p>
-      </p>
-      <p>Bem-vindo ao nosso site sobre Galinhas!</p>
-      <p>Aqui você vai mergulhar no fascinante mundo dessas aves incríveis...</p>
+
+    <!-- HOME -->
+    <section id="home" class="page" data-cor="purple">
+      <h3>Olá! Eu me chamo Robson</h3>
+      <h2>Desenvolvedor Full Stack e GameDev</h2>
+      <p>Construo experiências digitais, de sistemas funcionais a mundos interativos em jogos. Minha paixão é transformar ideias em código vivo.</p>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="page" data-cor="#eaeaea">
+      <p>Sou um desenvolvedor full stack com forte interesse em criação de jogos. Minha jornada começou com a curiosidade de entender como os jogos eram feitos, e evoluiu para um amor por programação e design de sistemas.</p>
       
+      <p>Tenho experiência com:</p>
+      <ul>
+        <li>💻 Desenvolvimento Web (HTML, CSS, JavaScript, Node.js, etc.)</li>
+        <li>🎮 Desenvolvimento de Jogos (Unity, Godot, Construct, etc.)</li>
+        <li>📦 Banco de dados e APIs (MySQL, Firebase, REST)</li>
+      </ul>
+
+      <p>Além disso, sou criativo, curioso e sempre aberto a aprender algo novo. Ah, e gosto muito de galinhas — inclusive elas me inspiraram a dar um toque único ao meu portfólio!</p>
     </section>
 
-    <section id="sobre" class="page">
-      <h2>Sobre</h2>
-      <strong>[1] As galinhas “falam” entre si!</strong>
-      <p>Galinhas têm um sistema de comunicação surpreendente...</p>
-      <strong>[2] Existem galinhas com penas nos pés...</strong>
-      <p>Algumas galinhas têm visuais super inusitados...</p>
-      <strong>[3] As galinhas têm memória e reconhecem rostos!</strong>
-      <p>Elas conseguem lembrar e diferenciar até 100 rostos...</p>
-      <strong>[4] Elas são descendentes diretas dos dinossauros!</strong>
-      <p>As galinhas compartilham ancestrais com os T-Rex.</p>
+    <!-- PROJETOS -->
+    <section id="projetos" class="page" data-cor="purple">
+      <div class="wrapper">
+
+        <div class="card">
+          <img src="src/img/libras.png" alt="Projeto 1">
+          <div class="info">
+            <h1>LibOnline</h1>
+            <p>LibOnline tem o objetivo de possibilitar a tradução imediata de sinais de libras por meio de gravaçoes ou streamings de video</p>
+            <!-- <button data-page="projetos">Projetos</button> -->
+            <a>Em andamento</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/bumbamat.jpeg" alt="Projeto 2">
+          <div class="info">
+            <h1>Bumbamat</h1>
+            <p>Bumbamat tem a finalidade de expor a matemática financeira que implicitamente existe na festa junina!</p>
+            <a>Em andamento</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/escritores.png" alt="Projeto 3">
+          <div class="info">
+            <h1>Escritores Maranhenses</h1>
+            <p>History of Books tem a finalidade de expor a importância dos escritores maranhenses que contribuíram significativamente para a literatura brasileira!</p>
+            <a href="https://view.genially.com/675bad9e9da1fb19bda87971/learning-experience-didactic-unit-escritores-do-maranhao">Projeto</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/matematicos.png" alt="Projeto 3">
+          <div class="info">
+            <h1>Maiores Matemáticos</h1>
+            <p>Minds of Math tem a finalidade de expor as contribuições dos grandes matemáticos que transformaram a história da matemática!</p>
+            <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">Projeto</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/img/breve.jpg" alt="Projeto 3">
+          <div class="info">
+            <h1>Educação Financeira</h1>
+            <p>Esse projeto tem a finalidade de ensinar educação financeira através de um jogo top-down interativo!</p>
+            <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">Projeto</a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section id="projetos" class="page">
-      <h2>Projetos</h2>
-      <p>Galinhas usam sons específicos para se comunicar...</p>
-      <p>Com um repertório cheio de sons únicos...</p>
-      <p>Galinhas são curiosas e inteligentes...</p>
-      <p>Apesar de serem aves, voam apenas curtas distâncias...</p>
+
+    <!-- CONTATO -->
+    <section id="contato" class="page" data-cor="#eaeaea">
+      <p>Quer trocar uma ideia, colaborar em algum projeto ou me contratar?</p>
+      <p>📧 <a href="mailto:su7368854@gmail.com">su7368854@gmail.com</a></p>
+      <p>📸 <a href="https://www.instagram.com/suaksgrssykkifrg" target="_blank">@meuInstagram</a></p>
+      <p>Fico à disposição para qualquer oportunidade bacana que envolva código, criatividade e, quem sabe, galinhas! 🐓</p>
     </section>
 
-    <section id="contato" class="page">
-      <h2>Contato</h2>
-      <p>Galeria de imagens será adicionada aqui.</p>
-    </section>
   </main>
 
   <!-- =========================== -->
-  <!-- RODAPÉ                    -->
+  <!-- RODAPÉ -->
   <!-- =========================== -->
-  <footer>
-    <div class="galinha">
-      <button class="menu"><i class="fab fa-whatsapp"></i></button>
-      <button class="menu"><i class="fab fa-instagram"></i></button>
-      <button class="menu"><i class="fab fa-tiktok"></i></button>
-      <button class="menu"><i class="fas fa-envelope"></i></button>
+  <footer class="footer-novo">
+    <div class="footer-conteudo">
+      <p>Feito por Robson Gomes da Cruz – Açailândia, MA</p>
+      <div class="galinha">
+        <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:su7368854@gmail.com" class="menu" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/Shikoji" class="menu" aria-label="GitHub" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
+
+
   <!-- =========================== -->
-  <!-- SCRIPTS                     -->
+  <!-- SCRIPTS -->
   <!-- =========================== -->
   <script src="style.js"></script>
 </body>

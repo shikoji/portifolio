@@ -9,13 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Função que exibe a página solicitada e esconde as demais
   function showPage(pageId) {
-    pages.forEach((section) => {
-      section.classList.remove("active");
-      if (section.id === pageId) {
-        section.classList.add("active");
+  pages.forEach((section) => {
+    section.classList.remove("active");
+
+    if (section.id === pageId) {
+      section.classList.add("active");
+
+      // Atualiza a cor do fundo do body com base no data-cor da seção
+      const corDeFundo = section.getAttribute("data-cor");
+      if (corDeFundo) {
+        document.body.style.backgroundColor = corDeFundo;
+      }
       }
     });
   }
+
 
   // Evento de clique para os botões (desktop + menu hamburguer)
   buttons.forEach((btn) => {
