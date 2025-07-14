@@ -259,17 +259,19 @@ nav.butao button:hover {
 .contato-link {
   font-size: 20px;
   color: var(--azul-petroleo);
-  text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: color 0.3s ease;
+  transition: transform 0.2s ease, color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none !important; /* FORÇA a remoção da linha */
 }
 
 .contato-link:hover {
   color: var(--vermelho-profundo);
-  text-decoration: underline;
+  transform: scale(1.2);
+  text-shadow: 0 0 5px rgba(178, 34, 34, 0.5), 0 0 10px rgba(178, 34, 34, 0.5);
+  text-decoration: none !important; /* garante que não volte a aparecer */
 }
 
 .contato-link i {
