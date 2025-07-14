@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- =========================== -->
-  <!-- METADADOS E IMPORTAÇÕES -->
-  <!-- =========================== -->
+  <!-- METADADOS -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shikoji</title>
+
+  <!-- ESTILOS -->
   <link rel="stylesheet" href="style.css">
   <link rel="website icon" href="src/img/logo.png">
   <link rel="stylesheet" href="src/fontawesome/css/all.min.css">
+
+  <!-- SCRIPTS -->
   <script src="src/fontawesome/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <!-- =========================== -->
-  <!-- CABEÇALHO E NAVEGAÇÃO -->
-  <!-- =========================== -->
+  <!-- CABEÇALHO -->
   <header>
-    <!-- Logo -->
     <div class="flaticon">
       <img src="src/img/logo.png" alt="Logo do site">
     </div>
 
-    <!-- Menu tradicional (desktop) -->
+    <!-- Menu desktop -->
     <div class="butoes">
       <nav class="butao">
         <button data-page="home">Home</button>
@@ -33,7 +32,7 @@
       </nav>
     </div>
 
-    <!-- Menu hamburguer (mobile) -->
+    <!-- Menu mobile -->
     <div class="navigation-wrapper">
       <input id="toggleCheck" type="checkbox" />
       <label for="toggleCheck">
@@ -50,30 +49,34 @@
     </div>
   </header>
 
-  <!-- =========================== -->
-  <!-- CONTEÚDO PRINCIPAL -->
-  <!-- =========================== -->
+  <!-- CONTEÚDO -->
   <main>
 
     <!-- HOME -->
     <section id="home" class="page" data-cor="purple">
-      <h3>Olá! Eu me chamo Robson</h3>
-      <h2>Desenvolvedor Full Stack e GameDev</h2>
-      <p>Construo experiências digitais, de sistemas funcionais a mundos interativos em jogos. Minha paixão é transformar ideias em código vivo.</p>
+      <div class="home-container">
+        <h3>Olá! Eu me chamo Robson</h3>
+        <h2>Desenvolvedor Full Stack e Criador de Jogos</h2>
+        <p>Transformo ideias em projetos reais através do código. Seja em sistemas web ou jogos digitais, minha missão é unir criatividade, lógica e design em experiências únicas.</p>
+      </div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="page" data-cor="#eaeaea">
-      <p>Sou um desenvolvedor full stack com forte interesse em criação de jogos. Minha jornada começou com a curiosidade de entender como os jogos eram feitos, e evoluiu para um amor por programação e design de sistemas.</p>
-      
-      <p>Tenho experiência com:</p>
-      <ul>
-        <li>💻 Desenvolvimento Web (HTML, CSS, JavaScript, Node.js, etc.)</li>
-        <li>🎮 Desenvolvimento de Jogos (Unity, Godot, Construct, etc.)</li>
-        <li>📦 Banco de dados e APIs (MySQL, Firebase, REST)</li>
-      </ul>
-
-      <p>Além disso, sou criativo, curioso e sempre aberto a aprender algo novo. Ah, e gosto muito de galinhas — inclusive elas me inspiraram a dar um toque único ao meu portfólio!</p>
+      <div class="sobre-container">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor apaixonado por criar, programar e transformar ideias em experiências digitais...</p>
+        <p>Tenho experiência com desenvolvimento web e de jogos...</p>
+        <ul class="skills-list">
+          <li>🎮 <strong>Godot & GDScript</strong></li>
+          <li>🐍 <strong>Python</strong></li>
+          <li>☕ <strong>Java</strong></li>
+          <li>🌐 <strong>HTML & CSS</strong></li>
+          <li>🧠 <strong>MicroScript & MicroStudio</strong></li>
+          <li>🛠️ <strong>VS Code</strong></li>
+        </ul>
+        <p>Gosto de aprender coisas novas...</p>
+      </div>
     </section>
 
     <!-- PROJETOS -->
@@ -84,8 +87,7 @@
           <img src="src/img/libras.png" alt="Projeto 1">
           <div class="info">
             <h1>LibOnline</h1>
-            <p>LibOnline tem o objetivo de possibilitar a tradução imediata de sinais de libras por meio de gravaçoes ou streamings de video</p>
-            <!-- <button data-page="projetos">Projetos</button> -->
+            <p>Tradução de sinais de Libras em tempo real.</p>
             <a>Em andamento</a>
           </div>
         </div>
@@ -94,7 +96,7 @@
           <img src="src/img/bumbamat.jpeg" alt="Projeto 2">
           <div class="info">
             <h1>Bumbamat</h1>
-            <p>Bumbamat tem a finalidade de expor a matemática financeira que implicitamente existe na festa junina!</p>
+            <p>Explora matemática financeira em festas juninas.</p>
             <a>Em andamento</a>
           </div>
         </div>
@@ -103,68 +105,60 @@
           <img src="src/img/escritores.png" alt="Projeto 3">
           <div class="info">
             <h1>Escritores Maranhenses</h1>
-            <p>History of Books tem a finalidade de expor a importância dos escritores maranhenses que contribuíram significativamente para a literatura brasileira!</p>
-            <a href="https://view.genially.com/675bad9e9da1fb19bda87971/learning-experience-didactic-unit-escritores-do-maranhao">Projeto</a>
+            <p>Importância dos escritores do Maranhão.</p>
+            <a href="https://view.genially.com/...">Projeto</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="src/img/matematicos.png" alt="Projeto 3">
+          <img src="src/img/matematicos.png" alt="Projeto 4">
           <div class="info">
             <h1>Maiores Matemáticos</h1>
-            <p>Minds of Math tem a finalidade de expor as contribuições dos grandes matemáticos que transformaram a história da matemática!</p>
-            <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">Projeto</a>
+            <p>Grandes nomes que revolucionaram a matemática.</p>
+            <a href="https://www.instagram.com/suaksgrssykkifrg">Projeto</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="src/img/breve.jpg" alt="Projeto 3">
+          <img src="src/img/breve.jpg" alt="Projeto 5">
           <div class="info">
             <h1>Educação Financeira</h1>
-            <p>Esse projeto tem a finalidade de ensinar educação financeira através de um jogo top-down interativo!</p>
-            <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">Projeto</a>
+            <p>Jogo top-down para ensinar finanças.</p>
+            <a href="https://www.instagram.com/suaksgrssykkifrg">Projeto</a>
           </div>
         </div>
 
       </div>
     </section>
 
-
     <!-- CONTATO -->
     <section id="contato" class="page" data-cor="#eaeaea">
-      <p>Quer trocar uma ideia, colaborar em algum projeto ou me contratar?</p>
-      <p>📧 <a href="mailto:su7368854@gmail.com">su7368854@gmail.com</a></p>
-      <p>📸 <a href="https://www.instagram.com/suaksgrssykkifrg" target="_blank">@meuInstagram</a></p>
-      <p>Fico à disposição para qualquer oportunidade bacana que envolva código, criatividade e, quem sabe, galinhas! 🐓</p>
+      <div class="contato-container">
+        <h2>Entre em Contato</h2>
+        <p>Fique à vontade para me chamar em qualquer rede abaixo 👇</p>
+        <div class="contato-links">
+          <a href="https://github.com/Shikoji" class="contato-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/suaksgrssykkifrg" class="contato-link" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="mailto:su7368854@gmail.com" class="contato-link"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- =========================== -->
   <!-- RODAPÉ -->
-  <!-- =========================== -->
   <footer class="footer-novo">
     <div class="footer-conteudo">
       <p>Feito por Robson Gomes da Cruz – Açailândia, MA</p>
       <div class="galinha">
-        <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" aria-label="Instagram" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="mailto:su7368854@gmail.com" class="menu" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/Shikoji" class="menu" aria-label="GitHub" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
+        <a href="https://www.instagram.com/suaksgrssykkifrg" class="menu" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:su7368854@gmail.com" class="menu"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Shikoji" class="menu" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </div>
   </footer>
 
-
-
-  <!-- =========================== -->
-  <!-- SCRIPTS -->
-  <!-- =========================== -->
+  <!-- SCRIPT -->
   <script src="style.js"></script>
 </body>
 </html>
